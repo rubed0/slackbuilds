@@ -89,7 +89,7 @@ CFLAGS="$SLKCFLAGS" \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --enable-gc=system \
-  --disable-offscreen \
+  --enable-offscreen \
   --disable-lsp \
   --disable-gc-debug \
   --disable-gc-full-debug \

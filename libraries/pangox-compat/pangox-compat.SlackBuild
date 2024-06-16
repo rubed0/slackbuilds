@@ -84,7 +84,7 @@ find -L . \
 for i in $CWD/patches/*.patch ; do patch -p1 < $i ; done
 
 NOCONFIGURE=1 ./autogen.sh
-CFLAGS="$SLKCFLAGS -fpermissive" \
+CFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \

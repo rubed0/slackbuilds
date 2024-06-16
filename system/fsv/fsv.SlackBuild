@@ -79,7 +79,7 @@ sed -i \
 sed -i 's/@DATADIRNAME@/share/' po/Makefile.in.in
 ./autogen.sh
 
-CFLAGS="$SLKCFLAGS -fpermissive" \
+CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \

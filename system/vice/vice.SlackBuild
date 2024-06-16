@@ -166,14 +166,14 @@ config() {
   # at all.
 
   # 20230504 bkw: note to self: -w means disable all warnings.
-  CFLAGS="$SLKCFLAGS -w -fcommon -fpermissive" \
+  CFLAGS="$SLKCFLAGS -w -fcommon" \
   CXXFLAGS="$SLKCFLAGS" \
   DOS2UNIX=/bin/true \
   XA=/bin/true \
   XDG_DESKTOP_MENU=/bin/true \
   ./configure \
     $configarg \
-    --disable-ffmpeg \
+    $ffmpeg \
     $pulseopt \
     --enable-html-docs \
     --enable-platformdox \
