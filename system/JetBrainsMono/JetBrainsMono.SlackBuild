@@ -32,9 +32,9 @@ PKGTYPE=${PKGTYPE:-tgz}
 
 ARCH=noarch
 
-# If the variable PRINT_PACKAGE_NAME is set, then this script will report what
-# the name of the created package would be, and then exit. This information
-# could be useful to other scripts.
+# If the variable PRINT_PACKAGE_NAME is set, then this script will report
+# what the name of the created package would be, and then exit. This 
+# information could be useful to other scripts.
 if [ ! -z "${PRINT_PACKAGE_NAME}" ]; then
   echo "$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.$PKGTYPE"
   exit 0
@@ -56,11 +56,11 @@ unzip $CWD/$PRGNAM-$VERSION.zip
 chown -R root:root .
 
 mkdir -p $PKG/usr/share/fonts/TTF
-cp -a ttf/*.ttf ttf/"No ligatures"/*.ttf ttf/Variable/*\.ttf $PKG/usr/share/fonts/TTF
+cp -a fonts/ttf/*\.ttf fonts/variable/*\.ttf $PKG/usr/share/fonts/TTF/
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a LICENSE $PKG/usr/doc/$PRGNAM-$VERSION/.
-cp $CWD/README $CWD/$PRGNAM.SlackBuild $PKG/usr/doc/$PRGNAM-$VERSION/.
+cp -a AUTHORS.txt OFL.txt $PKG/usr/doc/$PRGNAM-$VERSION/
+cp $CWD/README $CWD/$PRGNAM.SlackBuild $PKG/usr/doc/$PRGNAM-$VERSION/
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
